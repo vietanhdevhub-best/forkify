@@ -70,7 +70,7 @@ export const highlightedChoice = (id) => {
     e.classList.remove('results__link--active');
   });
   document
-    .querySelector(`a[href*="${id}"]`)
+    .querySelector(`.results__link[href*="${id}"]`)
     .classList.add('results__link--active');
 };
 export const renderResult = (results, page = 1, resultPerPage = 10) => {
