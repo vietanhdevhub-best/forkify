@@ -69,9 +69,10 @@ export const highlightedChoice = (id) => {
   arrSelect.forEach((e) => {
     e.classList.remove('results__link--active');
   });
-  document
-    .querySelector(`.results__link[href*="${id}"]`)
-    .classList.add('results__link--active');
+  const li = document.querySelector(`.results__link[href*="${id}"]`);
+  if (li) {
+    li.classList.add('results__link--active');
+  }
 };
 export const renderResult = (results, page = 1, resultPerPage = 10) => {
   const start = (page - 1) * resultPerPage;
