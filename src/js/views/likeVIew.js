@@ -1,4 +1,5 @@
 import { elements } from './base';
+// fixed file name
 export const toggleLike = (isLiked) => {
   const attributeString = isLiked ? 'icon-heart' : 'icon-heart-outlined';
   document
